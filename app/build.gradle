@@ -4,18 +4,26 @@ plugins {
 }
 
 android {
-    namespace 'com.reading.novel'
+    namespace 'com.boilerplate.example'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.reading.novel"
+        applicationId "com.boilerplate.example"
         minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
 
+        multiDexEnabled true
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
     final API_BASE_URL = '"https://egi-gds-cc-dev-dev-meterapp-mobile-service.cfapps.us21.hana.ondemand.com/"'
 
     buildTypes {
@@ -39,6 +47,26 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+
+    }
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/license.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+        exclude("META-INF/notice.txt")
+        exclude("META-INF/ASL2.0")
+        exclude("META-INF/*.kotlin_module")
+        exclude("META-INF/gradle/*")
+    }
+
 }
 
 dependencies {
@@ -55,16 +83,18 @@ dependencies {
     implementation libs.sdp
     implementation libs.daggerHilt
     implementation libs.daggerHiltCompiler
-    implementation libs.liveData.viewModel
     implementation libs.roundImage
     implementation libs.room
-    implementation libs.roomCompiler
     implementation libs.roomKtx
     implementation libs.retrofit
     implementation libs.retrofitGson
     implementation libs.retrofitAdapter
     implementation libs.retrofitLogging
     implementation libs.easyPermissions
-
+    implementation libs.multiDex
+    implementation libs.haroldadmin
+    implementation libs.retrofitScalars
+    implementation libs.liveDataViewModel
+    implementation libs.viewModelKtx
 
 }

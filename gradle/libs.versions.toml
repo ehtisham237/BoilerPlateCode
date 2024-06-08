@@ -11,12 +11,13 @@ activity = "1.9.0"
 constraintlayout = "2.1.4"
 ssp-sdp = "1.1.1"
 dagger-hilt = "2.48"
-liveData-viewModel = "2.2.0"
+liveDataViewModelVersion = "2.2.0"
 roundImage = "2.3.0"
 room = "2.6.0"
 retrofit = "2.9.0"
 retrofit-loging = "4.10.0"
 easy-permissions = "3.0.0"
+multidex_version = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,21 +32,19 @@ sdp = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "ssp-sdp" 
 ssp = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "ssp-sdp" }
 daggerHilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt" }
 daggerHiltCompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "dagger-hilt" }
-liveData-viewModel = { group = "androidx.lifecycle", name = "lifecycle-extensions" , version.ref = "liveData-viewModel" }
+liveDataViewModel = { group = "androidx.lifecycle", name = "lifecycle-extensions" , version.ref = "liveDataViewModelVersion" }
+viewModelKtx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "liveDataViewModelVersion" }
 roundImage = { group = "com.makeramen", name = "roundedimageview", version.ref = "roundImage" }
 room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
-roomCompiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 roomKtx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofitGson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 retrofitAdapter = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit" }
 retrofitLogging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "retrofit-loging" }
+retrofitScalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
 easyPermissions = { group = "pub.devrel", name = "easypermissions", version.ref = "easy-permissions" }
-
-
-
-
-
+multiDex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex_version" }
+haroldadmin = { group = "com.github.haroldadmin", name = "NetworkResponseAdapter", version = "4.0.1" }
 
 
 
